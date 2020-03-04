@@ -1,0 +1,26 @@
+Name: Abdulbasid Guled
+Student Number: 156024184
+Email: aguled5@myseneca.ca
+Due Date: 29/09/2019
+
+- In this workshop, I learned about class templates, template specialization, and deriving a class template from another.
+Many of my difficulties were from the at-home. They all came down to linker errors occuring from mismanagement of the static variables.
+Along with this was the difficulty in figuring out the constructors for the derived classes. 
+
+- Having gone through this lab, I realized that just like in Workshop 1, static class variables must be declared outside the class. Once I did this
+for the 2 static variables inside the derived template class, finishing off the rest of the workshop was as simple as fixing the specialization templates 
+so that they work as intended.
+
+- Specializing the sum() member function was necessary to handle the case where we are adding two string variables. The "+" operation on strings will simply 
+concatenate the 2 strings and the sum() function was not coded for handling the operation of 2 strings and so that particular operation needed to be specialized.
+
+- Specializing the initial value for a summation was necessary since each case requires a new initial value for the summation.
+
+- The reason for defining the class variables outside the class definition was because they were both declared as static. Both variables have internal linkage and would not 
+exist outside the lifetime of the class. They're also the only instance of the class type and so unlike regular variables, they only exist once. By declaring them outside the class,
+we define the static variables for the duration of the lifecycle of the program execution.
+
+
+Quiz 3 reflection:
+
+- Since I got perfect marks on the quiz, I have no question to reflect on from quiz 3.
