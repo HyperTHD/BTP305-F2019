@@ -1,0 +1,25 @@
+Name: Abdulbasid Guled
+Student Number: 156024184
+Email: aguled5@myseneca.ca
+Due Date: 24/11/2019
+
+- In this workshop, I learnt about how to read and write to and from binary files, how to use the std::bind function to bind a function to it's arguments, and lastly, how to implement threads and use them within C++
+
+- The problem for me here was learning how binary files worked. Since they're different from text files, most of the functions used with text files would not work here. Instead, I had to write the encoded data to an ofstream file set for binary text and then write to it in the case of the backup function or in the case of the restore function, allocate memory for a character array so that I could read the binary data into the array, reading in the data from an ifstream file object set for binary access.
+
+- Another problem was figuring out how many threads I was going to need for the at-home. The solution for this came with the idea that I should have 1 for conversion and 1 for converting back. 
+
+- Binary files were necessary in this workshop because of the need to encrypt data and then decrypt them back. The data in this workshop was some long text, but binary files can contain any data and store them in the same condition they were in before encryption. This is important because when we decrypt the encoded text file, we find that the data is in the same condition with no data being lost. Text files could not achieve the same thing and so binary files were the only way this could be done. We used them for writing encoded data to a file and for reading in the data and storing them in a character array so that we can encode/decode the data and then display the data.
+
+- Binding a function to it's arguments allows to manipulate the function according to the needs of the function. In this workshop, we had to use std::bind on the converter function so that we could manipulate what arguments to place into it and where. The usefulness increases when we consider that std::bind returns a function object that we can use when we create the threads in the at-home since the constructor for a thread requires a function object. Overall, the binding of a function to it's arguments allow us to change the way a function operates without specifying default values along with the number of arguments we need to pass to it.
+
+- Using multiple threads allow us to ensure that each process runs without being interrupted. This was even more important in this workshop because we're working with binary files. Because of their ability to preserve data, ensuring that the process to either read or write them occurs without interuptions is vital. In this workshop, I implemented multi-threading using 1 thread to encode the data, and second thread to decode the data by passing in a lambda that ensures the decoding occurs. In order to make sure the right file was being decoded, I passed in the current object by value so that I can check the encoded variable and toggle that.
+
+
+Quiz 9 Reflection:
+
+I answered 3 incorrectly and lost marks on question 1
+
+- For question 1, I mentioned that 1 advantage of using macros was faster compilation. This was incorrect. Macros allow us to create define variable symbols that we can use in our program that get replaced during the pre-processor phase, thus our program runs faster.
+
+- For question 3, the answer is that each thread will have their own global variable when the keyword "thread_local" is applied to a variable.
