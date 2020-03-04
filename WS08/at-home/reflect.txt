@@ -1,0 +1,29 @@
+Name: Abdulbasid Guled
+Student Number: 1560241484
+Email: aguled5@myseneca.ca
+Due Date: 17/11/2019
+
+- In this workshop, we worked with raw pointers as well as smart pointers. In terms of the syntax between the two, there wasn't that much difference, primarily because they both operate the same. 
+
+- The workshop wasn't too difficult compared to previous workshops. Most of the workshop was simple function implementation. The at-home required the usage of smart pointers and so I had to look up the cpp reference webpage and refer to the notes as well with how to use them. In terms of what smart pointer I used, I used the unique pointer.
+
+- The main advantage that smart pointer syntax provides is that it simplfies code by removing the need to delete the smart pointer. This is because the smart pointer is declared on the stack and when it goes out of scope, the delete function is automatically called. With the raw pointer, that's not the case and we have to call the delete function. Examples from my code below are:
+
+- Product* p = new Product(desc[i].desc, price[x].price);
+					p->validate();
+					priceList += p;
+					delete p;
+
+Compared to:
+
+- std::unique_ptr<Product>p(new Product(desc[i].desc, price[x].price));
+					p->validate();
+					priceList += p;	
+
+- Smart pointers also are the better choice when it comes to exception safety. They handle that much better than the raw pointers.
+
+- The difference between the raw and smart pointer syntax in my solution is the delete keyword in the raw pointer solution. It was needed in that solution but not the smart pointer solution because the destructor is implicitly called upon when the smart pointer goes out of scope. Another difference is the syntax of declaring both pointers. A raw pointer is just a normal pointer that we've used for the last 3 BTP courses (BTP100, BTP200, BTP305). A smart pointer is declared with the type in angle brackets since it's a template class. They're also objects allocated on the stack and so we do not need to explicitly call the delete keyword to free the memory.
+
+- Quiz 8 reflection:
+
+- Since I got 10/10 on quiz 8, I have nothing to reflect upon.  
