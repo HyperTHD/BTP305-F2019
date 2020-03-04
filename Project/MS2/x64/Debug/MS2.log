@@ -1,0 +1,3 @@
+﻿  CustomerOrder.cpp
+C:\Users\guled\OneDrive\Documents\Seneca College BSD\Semester 3\BTP305\Project\MS2\CustomerOrder.cpp(26,71): warning C4244:  '=': conversion from '__int64' to 'unsigned int', possible loss of data
+  MS2.vcxproj -> C:\Users\guled\OneDrive\Documents\Seneca College BSD\Semester 3\BTP305\Project\MS2\x64\Debug\MS2.exe
